@@ -1,5 +1,7 @@
 const getPixels = require('get-pixels');
 const quantize = require('quantize');
+const fileType = require('file-type')
+
 
 function createPixelArray(imgData, pixelCount, quality) {
     const pixels = imgData;
@@ -45,8 +47,9 @@ function validateOptions(options) {
 }
 
 function loadImg(img) {
+    const type = Buffer.isBuffer(img) ? fileType(img).mime : null;
     return new Promise((resolve, reject) => {
-        getPixels(img, function(err, data) {
+        getPixels(img, type, function(err, data) {
             if(err) {
                 reject(err)
             } else {

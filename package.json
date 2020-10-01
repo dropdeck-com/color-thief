@@ -1,6 +1,6 @@
 {
     "name": "colorthief",
-    "version": "2.3.2",
+    "version": "2.3.2a",
     "author": {
         "name": "Lokesh Dhakar",
         "email": "lokesh.dhakar@gmail.com",
@@ -19,7 +19,7 @@
     "homepage": "http://lokeshdhakar.com/projects/color-thief/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/lokesh/color-thief.git"
+        "url": "https://github.com/dropdeck-com/color-thief.git"
     },
     "license": "MIT",
     "source": "src/color-thief.js",
@@ -49,6 +49,7 @@
     },
     "dependencies": {
         "get-pixels": "^3.3.2",
+        "file-type": "12.3.0",
         "quantize": "github:lokesh/quantize"
     }
 }
